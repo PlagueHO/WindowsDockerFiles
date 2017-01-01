@@ -2,5 +2,7 @@ FROM microsoft/windowsservercore
 
 LABEL Description="Windows Server Core with JRE installed using Chocolatey"
 
+MAINTAINER Daniel Scott-Raynsford
+
 RUN powershell $ENV:chocolateyUseWindowsCompression = 'false'; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'));
 RUN choco install jre8 -y
