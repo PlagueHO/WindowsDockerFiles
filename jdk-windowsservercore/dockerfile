@@ -1,6 +1,6 @@
 FROM microsoft/windowsservercore
 
-LABEL Description="Windows Server Core with JRE installed using Chocolatey"
+LABEL Description="Windows Server Core with JDK installed using Chocolatey"
 
 RUN powershell $ENV:chocolateyUseWindowsCompression = 'false'; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'));
 RUN choco install jdk8 -y
